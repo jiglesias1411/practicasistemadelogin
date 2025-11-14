@@ -1,0 +1,130 @@
+:root {
+  color: #0f172a;
+  background-color: #020617;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: #020617;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-image: radial-gradient(circle at 20% 20%, rgba(147, 51, 234, 0.15), transparent 45%),
+    radial-gradient(circle at 80% 0%, rgba(14, 165, 233, 0.12), transparent 40%),
+    linear-gradient(120deg, #020617, #0f172a);
+  font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.status-card {
+  width: min(480px, 100%);
+  background: rgba(15, 23, 42, 0.8);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 1.5rem;
+  padding: 2.5rem;
+  color: #e2e8f0;
+  box-shadow: 0 20px 40px rgba(2, 6, 23, 0.45);
+  text-align: center;
+  backdrop-filter: blur(12px);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-size: 0.75rem;
+  color: #818cf8;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+}
+
+.lead {
+  margin: 0 auto 2rem;
+  max-width: 38ch;
+  color: #cbd5f5;
+  line-height: 1.55;
+}
+
+.spinner-wrapper {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 6px solid rgba(129, 140, 248, 0.15);
+  border-top-color: #818cf8;
+  animation: spin 1s linear infinite;
+}
+
+.pulse {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 999px;
+  border: 2px dashed rgba(248, 250, 252, 0.2);
+  animation: pulse 2.5s ease-out infinite;
+}
+
+.status-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.status-pill {
+  border-radius: 999px;
+  padding: 0.4rem 1rem;
+  background: rgba(99, 102, 241, 0.15);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  font-size: 0.85rem;
+  color: #c7d2fe;
+}
+
+.footer-note {
+  color: #94a3b8;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.7;
+  }
+
+  70% {
+    transform: scale(1.1);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+}
