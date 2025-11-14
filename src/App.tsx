@@ -59,7 +59,7 @@ function App() {
   }
   
   if (!userData || !userData.active) {
-  return <div>Usuario inactivo o datos no disponibles</div>;
+  return <div>Usuario INACTIVO o datos no disponibles</div>;
 }
 
   return (
